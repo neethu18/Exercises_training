@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button1" type="submit">Click on a function</button>
+    <!-- <form>
+        <input type="radio" data-action="edit" checked>Edit<br>
+        <input type="radio" data-action="cancel">Cancel<br>
+        <input type="radio" data-action="save">Save
+    </form> -->
+    <a href="#" data-action="edit">Edit</a>
+    <span class="controls">
+        <a href="#" data-action="cancel">Cancel</a> |
+        <a href="#" data-action="save">Save</a>
+    </span>
+</body>
+<script>
+    //     $("a[data-action]").on("click", function (event) {
+    //   event.preventDefault();
+    // })
+    var actions = {
+        edit: function (event) { alert("Edited") },
+        cancel: function (event) { alert("Cancelled") },
+        save: function (event) { alert("Saved") }
+    };
+    // $("button").on("click", function (event) {
+    // $.ajax({
+    //     url:""
+    // }
+
+    $("a[data-action]").on("click", function (event) {
+        
+            var link = $(this),
+            action = link.data("action");
+
+            event.preventDefault();
+
+            // If there's an action with the given name, call it
+            if (typeof actions[action] === "function") {
+                actions[action].call(this, event);
+            }
+        });
+    // });
+</script>
+
+</html>

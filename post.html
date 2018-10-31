@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input id="post" type="text"><br>
+        <img id="imgPost" alt="img"><br>
+        <img id="imgAction" alt="img">
+    </div>
+    <script>
+        // var textPost = document.getElementById("post");
+        // var imagePost = document.getElementById("imgPost");
+        // var imageAction = document.getElementById("imgAction");
+        var textP= new textPost();
+        var imageP= new imagePost();
+        var imageA= new imageAction();
+        function textPost(time, user) {
+            this.time = time;
+            this.user = user;
+        }
+        
+        function imagePost(time,user,imageId) {
+            // textPost.call(this,time,user);
+            this.imageId = imageId;
+        }
+        imagePost.prototype=Object.create(textPost.prototype);
+        
+        function imageAction(time,user,imageId,action) {
+            // imagePost.call(this,time,user,imageId);
+            this.action = action;
+        }
+        imageAction.prototype=Object.create(imagePost.prototype);
+        console.log(textP);
+        console.log(imageP);
+        console.log(imageA);
+    </script>
+</body>
+
+</html>

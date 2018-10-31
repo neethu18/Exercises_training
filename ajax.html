@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "https://jsonplaceholder.typicode.com/posts",type:"GET", success: function(result){
+            result.forEach(element => {
+                var app=multiple(element);
+                var bpp=app();
+                $("#div1").append(bpp);
+            //    console.log(element) ;
+            });
+            // $("#div1").html(JSON.stringify(result));
+            // console.log(result);
+
+        }});
+    });
+});
+function multiple(element){
+    function single(){
+        var t="<div><p>"+element.userId+"<br>"+element.id+"<br>"+element.title;
+        return t;
+    }return single;
+}
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get JSON content</button>
+
+</body>
+</html>

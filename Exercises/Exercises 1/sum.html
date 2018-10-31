@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a=[2,3,6,0,7];
+        var i, stop, j;
+        for (i = 0; i < a.length; i++) {
+            for (j = 0, stop = a.length - i; j < stop; j++) {
+                if (a[j] > a[j + 1]) {
+                    var temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+
+            }
+        }
+        var sum=a[a.length-1]+a[a.length-2];
+        console.log(sum);
+    </script>
+</html>

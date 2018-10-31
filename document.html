@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <a href="#" data-action="edit">Edit</a>
+        <span class="controls">
+            <a href="#" data-action="cancel">Cancel</a> |
+            <a href="#" data-action="save">Save</a>
+        </span>
+        <script>
+        var actions = {
+                edit: function (event) { alert("Edited") },
+                cancel: function (event) { alert("Cancelled") },
+                save: function (event) { alert("Saved") }
+            };
+        $("a[data-action]").on("click", function (event) {
+                
+                var link = $(this),
+                action = link.data("action");
+        
+                event.preventDefault();
+        
+                if (typeof actions[action] === "function") {
+                    actions[action].call(this, event);
+                }
+            });
+            </script>
+</body>
+</html>

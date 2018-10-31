@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+    <button id="button1" type="submit">Click</button>
+    <!-- <form>
+        <input type="radio" data-action="edit" checked>Edit<br>
+        <input type="radio" data-action="cancel">Cancel<br>
+        <input type="radio" data-action="save">Save
+    </form> -->
+</div>
+   
+</body>
+<script>
+    //     $("a[data-action]").on("click", function (event) {
+    //   event.preventDefault();
+    // })
+    
+    $("button").on("click", function () {
+    $.ajax({
+        url:"document.html",type:"GET", success: function(result){
+            // console.log(result);
+            $("#div1").html(result);
+
+        }
+    });
+
+    
+    });
+</script>
+
+</html>

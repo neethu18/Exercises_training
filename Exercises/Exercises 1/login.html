@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myForm" onsubmit="validate(event)">
+        <table align="center" cellspacing="10" cellpadding="5" frame="box" bgcolor="gray">
+            <caption align="alignment">LOGIN</caption>
+            <tr>
+                <td>Name:</td>
+                <td><input id="name" type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input id="phone" type="text" placeholder="Phone"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input id="ema" type="text" placeholder="Email"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <center><button type="submit" >Submit</button></center>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="login.js"></script>
+</body>
+
+</html>

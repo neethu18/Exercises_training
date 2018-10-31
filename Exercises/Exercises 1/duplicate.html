@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var a = [0, 2, 3, 3, 5, 7];
+        var b =[];
+        var flag=0,k=0;
+        for (var j = 0; j < a.length; j++) {
+            flag=0;
+            for (var i = j+1; i < a.length; i++) {
+                if(a[j]==a[i]){
+                   flag =1; 
+                }
+                   
+            }
+            if(flag==0){
+                b[k]= a[j];
+                k++;
+            }
+        }
+    console.log(b);
+    </script>
+</body>
+
+</html>

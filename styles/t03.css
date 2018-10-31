@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+.menu{
+    float:left; 
+    width:30%;
+    height: 700px;       
+    background: blueviolet;
+    color: azure;
+    border: 1px solid black; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.scart{
+    background:green;
+    color: azure;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    /* float: right; */
+    /* width: 70%; */
+    height: 700px;
+    /* border: 1px solid black;  */
+}
+/* li{
+    color: green;
+} */
